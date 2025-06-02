@@ -2,6 +2,10 @@
 name = "eveonline-sde-util"
 version = "0.1.0"
 edition = "2024"
+description = "EVE Online SDE util."
+license = "GPL-3.0-only"
+homepage = "https://github.com/EVEInfinity/eveonline-sde-util"
+repository = "https://github.com/EVEInfinity/eveonline-sde-util"
 
 [dependencies]
 anyhow = "1.0.98"
