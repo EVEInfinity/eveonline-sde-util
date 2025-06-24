@@ -36,6 +36,20 @@ impl Builder {
     }
   }
 
+  pub fn tranquility() -> Self {
+    Self {
+      version_base: Url::parse("https://binaries.eveonline.com/").expect("incorrect infinity url"),
+      eveclient_path: "/eveclient_TQ.json".to_string(),
+      binaries_base: Url::parse("https://binaries.eveonline.com/").expect("incorrect infinity url"),
+      resources_base: Url::parse("https://resources.eveonline.com/")
+        .expect("incorrect infinity url"),
+      client: reqwest::ClientBuilder::new(),
+      reqwest_middlewares: Vec::new(),
+      retry_times: None,
+      cache_dir: None,
+    }
+  }
+
   pub fn build(mut self) -> Result<Version> {
     if let Some(retry_times) = self.retry_times {
       self
